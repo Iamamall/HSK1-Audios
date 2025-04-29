@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #fc7eac 0%, #ff3a9c 100%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: clamp(2rem, 5vh, 6rem);
+}
+
+.page-banner {
+    font-size: 15vw;
+    color: rgb(0, 0, 0);
+}
+
+.generate-button {
+    padding: 2rem 5rem;
+    border-radius: 50px;
+    font-size: 2rem;
+    border: none;
+    transition: 0.2s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     
+}
+
+.generate-button:hover {
+    transform: scale(1.03);
+}
