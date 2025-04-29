@@ -31,8 +31,20 @@ body {
     border: none;
     transition: 0.2s ease-in-out;
     background-color: rgb(255, 255, 255);
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
      
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        font-size: 20vw;
+    }
+
+    .generate-button {
+        padding: 1.5rem 4rem;
+        font-size: 1.5rem;
+    }
 }
 
 .generate-button:hover {
