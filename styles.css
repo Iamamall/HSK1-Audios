@@ -127,7 +127,24 @@ html, body {
     .generate-button {
         padding: 1.5rem 4rem;
         font-size: 1.5rem;
+        transition: none;
     }
+
+    .generate-button,
+  .other-buttons button {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .generate-button:hover,
+  .other-buttons button:hover {
+    transform: none !important;
+  }
+
+    .generate-button:hover,
+    .other-buttons button:hover {
+    transform: none;
+  }
 
     .nav-bar ul {
         font-size: 1rem;
