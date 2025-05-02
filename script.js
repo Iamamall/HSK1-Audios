@@ -106,7 +106,7 @@ const audioList = [
     { file: '名字.mp3', label: '名字' },
     { file: '书.mp3', label: '书' },
     { file: '汉语.mp3', label: '汉语' },
-    { file: '子.mp3', label: '子' },
+    { file: '字.mp3', label: '字' },
     { file: '桌子.mp3', label: '桌子' },
     { file: '椅子.mp3', label: '椅子' },
     { file: '谢谢.mp3', label: '谢谢' },
@@ -183,7 +183,7 @@ const audioList = [
     });
   
     // Reset character button text
-    characterButton.textContent = 'show characters';
+    characterButton.textContent = 'characters';
   });
   
   // Replay last audio
@@ -203,7 +203,7 @@ const audioList = [
     if (lastLabel) {
       characterButton.textContent = lastLabel;
       setTimeout(() => {
-        characterButton.textContent = 'show characters';
+        characterButton.textContent = 'characters';
       }, 3000);
       
     } else {
