@@ -6,7 +6,7 @@ const audioList = [
     { file: '那儿.mp3', label: '那儿' },
     { file: '我.mp3', label: '我' },
     { file: '我们.mp3', label: '我们' },
-    { file: '他们她们.m4a', label: '了' },
+    { file: '他们她们.mp3', label: '他们她们' },
     { file: '你.mp3', label: '你' },
     { file: '你们.mp3', label: '你们' },
     { file: '他她.mp3', label: '他她' },
@@ -160,10 +160,31 @@ const audioList = [
   let remaining = [...audioList];
   let lastAudio = null;
   let lastLabel = null;
+  //let currentIndex = 0; // <--- add this line
   
   const generateButton = document.querySelector('.generate-button');
   const replayButton = document.querySelector('.replay-button');
   const characterButton = document.querySelector('.character-button');
+
+  /*generateButton.addEventListener('click', () => {
+    if (currentIndex >= audioList.length) {
+      currentIndex = 0; // Restart from beginning
+    }
+  
+    const current = audioList[currentIndex];
+    currentIndex++;
+  
+    lastAudio = new Audio(`audio/${current.file}`);
+    lastLabel = current.label;
+  
+    lastAudio.play().catch((error) => {
+      console.error('Audio failed to play:', error);
+    });
+  
+    // Reset character button text
+    characterButton.textContent = 'characters';
+  });
+  */
   
   // Generate random audio
   generateButton.addEventListener('click', () => {
@@ -185,6 +206,7 @@ const audioList = [
     // Reset character button text
     characterButton.textContent = 'characters';
   });
+  
   
   // Replay last audio
   replayButton.addEventListener('click', () => {
