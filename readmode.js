@@ -160,33 +160,12 @@ const audioList = [
   let remaining = [...audioList];
   let lastAudio = null;
   let lastLabel = null;
-  //let currentIndex = 0; // <--- add this line
   
   const generateButton = document.querySelector('.generate-button');
   const replayButton = document.querySelector('.replay-button');
   const characterButton = document.querySelector('.character-button');
-
-  /*generateButton.addEventListener('click', () => {
-    if (currentIndex >= audioList.length) {
-      currentIndex = 0; // Restart from beginning
-    }
   
-    const current = audioList[currentIndex];
-    currentIndex++;
-  
-    lastAudio = new Audio(`audio/${current.file}`);
-    lastLabel = current.label;
-  
-    lastAudio.play().catch((error) => {
-      console.error('Audio failed to play:', error);
-    });
-  
-    // Reset character button text
-    characterButton.textContent = 'characters';
-  });
-  */
-  
-  // Generate random audio
+  // Generate random characters
   generateButton.addEventListener('click', () => {
     if (remaining.length === 0) {
       remaining = [...audioList];
@@ -199,51 +178,37 @@ const audioList = [
     lastAudio = new Audio(`audio/${current.file}`);
     lastLabel = current.label;
   
-    lastAudio.play().catch((error) => {
-      console.error('Audio failed to play:', error);
-    });
-  
-    // Reset character button text
-    characterButton.textContent = 'characters';
+    // Show characters temporarily (4 seconds)
+    generateButton.textContent = lastLabel;
+    setTimeout(() => {
+      generateButton.textContent = 'Random Word';
+    }, 4000);
   });
   
-  
-  // Replay last audio
-  replayButton.addEventListener('click', () => {
+  // Play audio of the last generated characters
+  characterButton.addEventListener('click', () => {
     if (lastAudio) {
       lastAudio.currentTime = 0;
       lastAudio.play().catch((error) => {
-        console.error('Replay failed:', error);
+        console.error('Audio failed to play:', error);
       });
     } else {
-      console.warn('No audio has been played yet.');
+      console.warn('No audio has been generated yet.');
     }
   });
   
-  // Show characters
-  characterButton.addEventListener('click', () => {
+  // Replay characters (shows again for 4 seconds)
+  replayButton.addEventListener('click', () => {
     if (lastLabel) {
-      characterButton.textContent = lastLabel;
+      generateButton.textContent = lastLabel;
       setTimeout(() => {
-        characterButton.textContent = 'characters';
-      }, 3000);
-      
+        generateButton.textContent = 'Random Word';
+      }, 4000);
     } else {
-      console.warn('No characters to display.');
+      console.warn('No characters have been generated yet.');
     }
   });
 
-  document.getElementById("read-button").addEventListener("click", function() {
-    window.location.href = "readingmode.html";  // Replace with your desired page URL
-});
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
+document.getElementById("listen-button").addEventListener("click", function() {
+    window.location.href = "index.html";
+  });

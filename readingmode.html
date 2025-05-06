@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="listenmode.css">
+    <link rel="stylesheet" href="readmode.css">
     <title>HSK1 Audio Generator</title>
 </head>
-<body class="hsk1-body">
+<body class="hsk1-read-body">
     <nav class="nav-bar">
         <ul>
             <a href="index.html"><li class="nav-hsk1">HSK 1</li></a>
@@ -19,19 +19,19 @@
         </ul>
     </nav>
     <div class="toggle-buttons">
-        <button class="listen-button">Listening</button>
-        <button id="read-button" class="read-button">Reading</button>
+        <button id="listen-button" class="listen-button">Listening</button>
+        <button class="read-button">Reading</button>
     </div>
 
     <div class="container">
         <h1 class="page-banner">HSK 音频文件</h1> 
-        <button id="generate-button" class="generate-button">Random Audio</button>
+        <button id="generate-button" class="generate-button">Random Word</button>
         <div class="other-buttons">
-            <button class="replay-button">replay</button>
-            <button class="character-button">characters</button>
+            <button class="replay-button">reshow</button>
+            <button class="character-button">play audio</button>
         </div>  
     </div>
     
-    <script src="script.js"></script>
+    <script src="readmode.js"></script>
 </body>
 </html>
