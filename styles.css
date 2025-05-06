@@ -109,7 +109,7 @@ html, body {
 }
 
 .page-banner {
-    font-size: 12vw;
+    font-size: 10vw;
     color: rgb(0, 0, 0);
 }
 
@@ -214,11 +214,11 @@ html, body {
 }
 
 .toggle-buttons {
-    position: absolute;
-    left: 50%;
-    top: 11.5%;
-    transform: translateX(-50%);
-    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 5vh;
 }
 
 .toggle-buttons button {
