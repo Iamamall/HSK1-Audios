@@ -224,9 +224,6 @@ const audioList = [
   characterButton.addEventListener('click', () => {
     if (lastLabel) {
       characterButton.textContent = lastLabel;
-      setTimeout(() => {
-        characterButton.textContent = 'characters';
-      }, 3000);
       
     } else {
       console.warn('No characters to display.');

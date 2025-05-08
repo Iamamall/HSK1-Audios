@@ -180,9 +180,7 @@ const audioList = [
   
     // Show characters temporarily (4 seconds)
     generateButton.textContent = lastLabel;
-    setTimeout(() => {
-      generateButton.textContent = 'Random Word';
-    }, 4000);
+    
   });
   
   // Play audio of the last generated characters
@@ -197,17 +195,6 @@ const audioList = [
     }
   });
   
-  // Replay characters (shows again for 4 seconds)
-  replayButton.addEventListener('click', () => {
-    if (lastLabel) {
-      generateButton.textContent = lastLabel;
-      setTimeout(() => {
-        generateButton.textContent = 'Random Word';
-      }, 4000);
-    } else {
-      console.warn('No characters have been generated yet.');
-    }
-  });
 
 document.getElementById("listen-button").addEventListener("click", function() {
     window.location.href = "index.html";
