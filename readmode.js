@@ -34,7 +34,7 @@ const audioList = [
     { file: '岁.mp3', label: '岁' },
     { file: '本.mp3', label: '本' },
     { file: '些.mp3', label: '些' },
-    { file: '快.mp3', label: '快' },
+    { file: '块.mp3', label: '块' },
     { file: '不.mp3', label: '不' },
     { file: '没.mp3', label: '没' },
     { file: '很.mp3', label: '很' },
